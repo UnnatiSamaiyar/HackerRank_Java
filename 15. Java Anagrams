@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Solution {
+
+    static boolean isAnagram(String a, String b) {
+        // Complete the function
+        if(a.length()!=b.length()) return false;
+        String c = a.toUpperCase();
+        String d = b.toUpperCase();
+        char[] a1 = c.toCharArray();
+        char[] b1 = d.toCharArray();
+        java.util.Arrays.sort(a1);
+        java.util.Arrays.sort(b1);
+        for(int i=0; i<a.length(); i++){
+            if(a1[i]!=b1[i]) return false;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
